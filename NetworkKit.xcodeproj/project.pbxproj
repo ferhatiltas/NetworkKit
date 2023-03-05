@@ -11,6 +11,11 @@
 		6571FB4029B5452B00C3D997 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB3529B5452B00C3D997 /* NetworkKit.framework */; };
 		6571FB4529B5452B00C3D997 /* NetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FB4429B5452B00C3D997 /* NetworkKitTests.swift */; };
 		6571FB4629B5452B00C3D997 /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6571FB3829B5452B00C3D997 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6571FB7D29B5454A00C3D997 /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FB7B29B5454A00C3D997 /* NetworkKit.swift */; };
+		6571FB7E29B5454A00C3D997 /* AnyNetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571FB7C29B5454A00C3D997 /* AnyNetworkKit.swift */; };
+		6571FB8229B5457800C3D997 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB8129B5457800C3D997 /* CoreKit.framework */; };
+		6571FB8329B5457800C3D997 /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FB8129B5457800C3D997 /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6571FB8729B5459000C3D997 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6571FB8629B5459000C3D997 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +28,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6571FB8429B5457800C3D997 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6571FB8329B5457800C3D997 /* CoreKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6571FB3529B5452B00C3D997 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571FB3829B5452B00C3D997 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
 		6571FB3929B5452B00C3D997 /* NetworkKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkKit.docc; sourceTree = "<group>"; };
 		6571FB3F29B5452B00C3D997 /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571FB4429B5452B00C3D997 /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
+		6571FB7B29B5454A00C3D997 /* NetworkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
+		6571FB7C29B5454A00C3D997 /* AnyNetworkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNetworkKit.swift; sourceTree = "<group>"; };
+		6571FB8129B5457800C3D997 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6571FB8229B5457800C3D997 /* CoreKit.framework in Frameworks */,
+				6571FB8729B5459000C3D997 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +80,7 @@
 				6571FB3729B5452B00C3D997 /* NetworkKit */,
 				6571FB4329B5452B00C3D997 /* NetworkKitTests */,
 				6571FB3629B5452B00C3D997 /* Products */,
+				6571FB8029B5457800C3D997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 		6571FB3729B5452B00C3D997 /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				6571FB7A29B5454A00C3D997 /* Kit */,
 				6571FB3829B5452B00C3D997 /* NetworkKit.h */,
 				6571FB3929B5452B00C3D997 /* NetworkKit.docc */,
 			);
@@ -83,6 +109,23 @@
 				6571FB4429B5452B00C3D997 /* NetworkKitTests.swift */,
 			);
 			path = NetworkKitTests;
+			sourceTree = "<group>";
+		};
+		6571FB7A29B5454A00C3D997 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				6571FB7B29B5454A00C3D997 /* NetworkKit.swift */,
+				6571FB7C29B5454A00C3D997 /* AnyNetworkKit.swift */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		6571FB8029B5457800C3D997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6571FB8129B5457800C3D997 /* CoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,12 +150,16 @@
 				6571FB3129B5452B00C3D997 /* Sources */,
 				6571FB3229B5452B00C3D997 /* Frameworks */,
 				6571FB3329B5452B00C3D997 /* Resources */,
+				6571FB8429B5457800C3D997 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NetworkKit;
+			packageProductDependencies = (
+				6571FB8629B5459000C3D997 /* Alamofire */,
+			);
 			productName = NetworkKit;
 			productReference = 6571FB3529B5452B00C3D997 /* NetworkKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 6571FB2B29B5452B00C3D997;
+			packageReferences = (
+				6571FB8529B5459000C3D997 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 6571FB3629B5452B00C3D997 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6571FB3A29B5452B00C3D997 /* NetworkKit.docc in Sources */,
+				6571FB7E29B5454A00C3D997 /* AnyNetworkKit.swift in Sources */,
+				6571FB7D29B5454A00C3D997 /* NetworkKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +448,7 @@
 		6571FB4D29B5452B00C3D997 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UUB7XUTT6S;
@@ -412,6 +465,7 @@
 		6571FB4E29B5452B00C3D997 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UUB7XUTT6S;
@@ -456,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6571FB8529B5459000C3D997 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6571FB8629B5459000C3D997 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6571FB8529B5459000C3D997 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6571FB2C29B5452B00C3D997 /* Project object */;
 }
